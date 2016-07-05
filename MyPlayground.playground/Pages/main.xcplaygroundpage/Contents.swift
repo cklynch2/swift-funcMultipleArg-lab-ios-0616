@@ -14,9 +14,11 @@
  ### 1. Create a function that will take in a continent and the number of countries in that continent. It should print the following sentence "____ is a continent which contains ___ countries".
  */
 // write your code here
+func continentCountryCount (continent continent: String, countryCount: Int) {
+    print("\(continent) is a continent which contains \(countryCount) countries.")
+}
 
-
-
+continentCountryCount(continent: "South America", countryCount: 12)
 
 /*: question2
  ### 2. Can you see why the code below doesn't work? Fix the function call to get rid of the error.
@@ -25,21 +27,21 @@ func greeting(name: String, greeting: String) {
     print("\(greeting), \(name)!")
 }
 
-greeting("Danny", "Hello")
+greeting("Danny", greeting:"Hello")
 
-
+// The function call did not work because you need to specify the name of the second argument, as it is written in the function declaration, in this case 'greeting:'.
 
 
 /*: question3
  ### 3. This function doesn't work, either. Can you fix the function (_not_ the call) so that it works?
  */
-func daysInMonth(month: String, days: String) {
+func daysInMonth(month: String, days: Int) {
     print("There are \(days) in \(month)")
 }
 
 daysInMonth("November", days: 30)
 
-
+// The data type of the second argument should be Int rather than String. (Or, alternatively, you could change the method call to pass the string "30" as the second argument, but this makes less sense.)
 
 
 /*: question4
@@ -47,9 +49,11 @@ daysInMonth("November", days: 30)
  */
 // write your code here
 
+func liquorCountdown (bottleCount: Int, liquorType: String, location: String) {
+    print("\(bottleCount) bottles of \(liquorType) on the \(location) wall.")
+}
 
-
-
+liquorCountdown(100, liquorType: "champagne", location: "easy-to-reach")
 /*:
  [Solution](solution)
  */
